@@ -1,7 +1,11 @@
 {
   "name": "Sylas",
-  "hp" : 1000,
-  "attack_damage" : 60,
-  "ability_power" : 120,
-  "armor" : 50
+  "hp": 1200,
+  "attack_damage": 50,
+  "ability_power": 150,
+  "armor": 60,
+  "magic_armor": 90,
+  "speed": 350,
+  "true_damage": 30,
+  "max_hp": 1200
 }

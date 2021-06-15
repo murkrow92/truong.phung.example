@@ -17,6 +17,17 @@ class Champion:
         self.button_e = button_e
         self.button_r = button_r
 
+    def print_champion(self):
+        print("Name:", self.name)
+        print("HP:", self.hp)
+        print("Attack Damage:", self.attack_damage)
+        print("Ability Power:", self.ability_power)
+        print("Armor:", self.armor)
+        print("Magic Armor:", self.magic_armor)
+        print("True_Damage:", self.true_damage)
+        print("Max HP:", self.max_hp)
+
+
     def travelled_distance(self, time):
         return self.speed * time
 

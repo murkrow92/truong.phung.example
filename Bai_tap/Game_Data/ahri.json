@@ -1,7 +1,11 @@
 {
   "name": "Ahri",
-  "hp" : 1000,
-  "attack_damage" : 60,
-  "ability_power" : 120,
-  "armor" : 50
+  "hp": 700,
+  "attack_damage": 50,
+  "ability_power": 100,
+  "armor": 50,
+  "magic_armor": 25,
+  "speed": 340,
+  "true_damage": 20,
+  "max_hp": 700
 }

@@ -1,17 +1,27 @@
 from Bai_tap.Champions.Champion import Champion
-from Bai_tap.Skills.Ahri.Charm import Charm
-from Bai_tap.Skills.Ahri.FoxFire import FoxFire
-from Bai_tap.Skills.Ahri.OrbOfDeception import OrbOfDeception
-from Bai_tap.Skills.Ahri.SpritRush import SpiritRush
+from Bai_tap.Skills.Sylas.Abscond import Abscond
+from Bai_tap.Skills.Sylas.Hijack import Hijack
+from Bai_tap.Skills.Sylas.Kingslayer import Kingslayer
+from Bai_tap.Skills.Sylas.ChaimLash import ChaimLash
+from Bai_tap.Utils.file_utils import read
 
+sylas = read("sylas")
 
 class Sylas(Champion):
     def __init__(self):
-        orb_of_deception = OrbOfDeception()
-        fox_fire = FoxFire()
-        charm = Charm()
-        spirit_rush = SpiritRush()
-        super().__init__(name="Sylas", hp=1200, attack_damage=50, ability_power=150, armor=60, magic_armor=90,
-                         speed=350, true_damage=30, max_hp=1200, button_q=orb_of_deception, button_w=fox_fire,
-                         button_e=charm,
-                         button_r=spirit_rush)
+        chain_lash = ChaimLash()
+        kingslayer = Kingslayer()
+        abscond = Abscond()
+        hijack = Hijack()
+        super().__init__(name="Sylas", hp= sylas["hp"],
+                         attack_damage=sylas["attack_damage"],
+                         ability_power=sylas["ability_power"],
+                         armor=sylas["armor"],
+                         magic_armor=sylas["magic_armor"],
+                         speed=sylas["speed"],
+                         true_damage=sylas["true_damage"],
+                         max_hp=sylas["max_hp"],
+                         button_q=chain_lash,
+                         button_w=kingslayer,
+                         button_e=abscond,
+                         button_r=hijack)
