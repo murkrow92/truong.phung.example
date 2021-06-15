@@ -2,16 +2,14 @@ import json
 import os
 
 
-def read():
-    dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, "..\Game_Data\sylas.json")
+# dirname = os.path.dirname(__file__)
+# filename_sylas = os.path.join(dirname, "..\Game_Data\sylas.json")
+
+def read(filename):
     file = open(filename)
     read_file = file.read()
     champion = json.loads(read_file)
     return champion
-
-
-champiton = read()
 
 
 class Champion():
@@ -32,11 +30,25 @@ class Champion():
 
 class Sylas(Champion):
     def __init__(self):
-        super().__init__(name=champiton['name'], hp=champiton['hp'],
-                         attack_damage=champiton['attack_damage'],
-                         ability_power=champiton['ability_power'],
-                         armor=champiton['armor'])
+        super().__init__(name=champion_sylas['name'], hp=champion_sylas['hp'],
+                         attack_damage=champion_sylas['attack_damage'],
+                         ability_power=champion_sylas['ability_power'],
+                         armor=champion_sylas['armor'])
 
+
+class Ahri(Champion):
+    def __init__(self):
+        super().__init__(name=champion_ahri['name'], hp=champion_ahri['hp'],
+                         attack_damage=champion_ahri['attack_damage'],
+                         ability_power=champion_ahri['ability_power'],
+                         armor=champion_ahri['armor'])
+
+
+champion_sylas = read("..\Game_Data\sylas.json")
+champion_ahri = read("..\Game_Data\\ahri.json")
 
 sylas = Sylas()
 sylas.print_champion()
+
+ahri = Ahri()
+ahri.print_champion()
