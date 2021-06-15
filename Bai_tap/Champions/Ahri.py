@@ -3,9 +3,6 @@ from Bai_tap.Skills.Ahri.Charm import Charm
 from Bai_tap.Skills.Ahri.FoxFire import FoxFire
 from Bai_tap.Skills.Ahri.OrbOfDeception import OrbOfDeception
 from Bai_tap.Skills.Ahri.SpritRush import SpiritRush
-from Bai_tap.Utils.file_utils import read
-
-ahri = read("ahri")
 
 
 class Ahri(Champion):
@@ -15,14 +12,7 @@ class Ahri(Champion):
         charm = Charm()
         spirit_rush = SpiritRush()
 
-        super().__init__(name="Ahri",hp= ahri["hp"],
-                         attack_damage=ahri["attack_damage"],
-                         ability_power=ahri["ability_power"],
-                         armor=ahri["armor"],
-                         magic_armor=ahri["magic_armor"],
-                         speed=ahri["speed"],
-                         true_damage=ahri["true_damage"],
-                         max_hp=ahri["max_hp"],
+        super().__init__(name="Ahri",
                          button_q=orb_of_deception,
                          button_w=fox_fire,
                          button_e=charm,

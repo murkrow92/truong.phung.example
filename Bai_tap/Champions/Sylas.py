@@ -7,21 +7,15 @@ from Bai_tap.Utils.file_utils import read
 
 sylas = read("sylas")
 
+
 class Sylas(Champion):
     def __init__(self):
         chain_lash = ChaimLash()
-        kingslayer = Kingslayer()
+        king_slayer = Kingslayer()
         abscond = Abscond()
         hijack = Hijack()
-        super().__init__(name="Sylas", hp= sylas["hp"],
-                         attack_damage=sylas["attack_damage"],
-                         ability_power=sylas["ability_power"],
-                         armor=sylas["armor"],
-                         magic_armor=sylas["magic_armor"],
-                         speed=sylas["speed"],
-                         true_damage=sylas["true_damage"],
-                         max_hp=sylas["max_hp"],
+        super().__init__(name="Sylas",
                          button_q=chain_lash,
-                         button_w=kingslayer,
+                         button_w=king_slayer,
                          button_e=abscond,
                          button_r=hijack)

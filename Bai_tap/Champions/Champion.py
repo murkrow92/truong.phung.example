@@ -1,16 +1,20 @@
+from Bai_tap.Utils.file_utils import read
+
+
 class Champion:
 
-    def __init__(self, name, hp, attack_damage, ability_power, armor, magic_armor, speed, true_damage, max_hp, button_q,
-                 button_w, button_e, button_r):
+    def __init__(self, name, button_q, button_w, button_e, button_r):
+        champion_data = read(name.lower())
+
         self.name = name
-        self.hp = hp
-        self.attack_damage = attack_damage
-        self.ability_power = ability_power
-        self.armor = armor
-        self.magic_armor = magic_armor
-        self.speed = speed
-        self.true_damage = true_damage
-        self.max_hp = max_hp
+        self.hp = champion_data['hp']
+        self.attack_damage = champion_data['attack_damage']
+        self.ability_power = champion_data['ability_power']
+        self.armor = champion_data['armor']
+        self.magic_armor = champion_data['magic_armor']
+        self.speed = champion_data['speed']
+        self.true_damage = champion_data['true_damage']
+        self.max_hp = champion_data['max_hp']
 
         self.button_q = button_q
         self.button_w = button_w
@@ -26,7 +30,6 @@ class Champion:
         print("Magic Armor:", self.magic_armor)
         print("True_Damage:", self.true_damage)
         print("Max HP:", self.max_hp)
-
 
     def travelled_distance(self, time):
         return self.speed * time
