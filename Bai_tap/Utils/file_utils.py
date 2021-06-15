@@ -2,10 +2,10 @@ import json
 import os
 
 
-# dirname = os.path.dirname(__file__)
-# filename_sylas = os.path.join(dirname, "..\Game_Data\sylas.json")
-
-def read(filename):
+def read(file_name):
+    print(file_name)
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname,"../Game_Data/%s.json" %file_name)
     file = open(filename)
     read_file = file.read()
     champion = json.loads(read_file)
@@ -44,11 +44,10 @@ class Ahri(Champion):
                          armor=champion_ahri['armor'])
 
 
-champion_sylas = read("..\Game_Data\sylas.json")
-champion_ahri = read("..\Game_Data\\ahri.json")
+champion_sylas = read("sylas")
+champion_ahri = read("ahri")
 
 sylas = Sylas()
 sylas.print_champion()
-
 ahri = Ahri()
 ahri.print_champion()
