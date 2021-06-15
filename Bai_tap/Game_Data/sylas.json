@@ -1,0 +1,7 @@
+{
+  "name": "Sylas",
+  "hp" : 1000,
+  "attack_damage" : 60,
+  "ability_power" : 120,
+  "armor" : 50
+}
