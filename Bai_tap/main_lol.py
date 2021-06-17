@@ -7,3 +7,6 @@ sylas.print_champion()
 print("\n")
 ahri = Ahri()
 ahri.print_champion()
+
+sylas.use_r(ahri)
+

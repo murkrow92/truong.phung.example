@@ -3,9 +3,6 @@ from Bai_tap.Skills.Sylas.Abscond import Abscond
 from Bai_tap.Skills.Sylas.Hijack import Hijack
 from Bai_tap.Skills.Sylas.Kingslayer import Kingslayer
 from Bai_tap.Skills.Sylas.ChaimLash import ChaimLash
-from Bai_tap.Utils.file_utils import read
-
-sylas = read("sylas")
 
 
 class Sylas(Champion):

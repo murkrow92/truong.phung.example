@@ -4,6 +4,7 @@ from Bai_tap.Utils.file_utils import read
 class Champion:
 
     def __init__(self, name, button_q, button_w, button_e, button_r):
+
         champion_data = read(name.lower())
 
         self.name = name
@@ -67,3 +68,8 @@ class Champion:
     def recover(self, life_steal):
         self.hp = self.hp + life_steal
         print("CURRENT HP AFTER RECOVER:", self.hp)
+
+    def disabled(self, opponent):
+
+
+
