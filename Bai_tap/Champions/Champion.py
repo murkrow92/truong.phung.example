@@ -69,7 +69,6 @@ class Champion:
         self.hp = self.hp + life_steal
         print("CURRENT HP AFTER RECOVER:", self.hp)
 
-    def disabled(self, opponent):
 
 
 
