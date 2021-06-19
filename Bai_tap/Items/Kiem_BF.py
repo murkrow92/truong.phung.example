@@ -8,4 +8,4 @@ class Kiem_bf(Items):
     def add_item(self, champion):
         super().add_item(champion)
         print("DAMAGE CHAMPION AFTER ADD ITEM:", champion.attack_damage + 50)
-        return champion.attack_damage + 50
+        champion.attack_damage = champion.attack_damage + 50
