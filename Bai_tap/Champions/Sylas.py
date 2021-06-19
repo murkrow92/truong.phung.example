@@ -1,4 +1,5 @@
 from Bai_tap.Champions.Champion import Champion
+from Bai_tap.Items.Kiem_BF import Kiem_bf
 from Bai_tap.Skills.Sylas.Abscond import Abscond
 from Bai_tap.Skills.Sylas.Hijack import Hijack
 from Bai_tap.Skills.Sylas.Kingslayer import Kingslayer
@@ -11,7 +12,8 @@ class Sylas(Champion):
         king_slayer = Kingslayer()
         abscond = Abscond()
         hijack = Hijack()
-        super().__init__(name="Sylas",
+        kiem_bf = Kiem_bf()
+        super().__init__(name="Sylas", items= kiem_bf,
                          button_q=chain_lash,
                          button_w=king_slayer,
                          button_e=abscond,
