@@ -1,16 +1,11 @@
-from Bai_tap.Utils.file_utils import read
-from Bai_tap.create_champion import read_names
-
-
-
-
+from Bai_tap.Utils.file_utils import read_champion_data
 
 class Champion:
     is_disabled = False
 
     def __init__(self, name, button_q, button_w, button_e, button_r):
 
-        champion_data = read(name.lower())
+        champion_data = read_champion_data(name.lower())
 
         self.name = name
         self.hp = champion_data['hp']
