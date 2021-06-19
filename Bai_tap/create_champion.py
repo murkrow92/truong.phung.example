@@ -1,8 +1,8 @@
 import json
-import os.path
+import os
 
 
-def read():
+def read_names():
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, "..\Bai_tap\Game_Data\\names.json")
     file = open(filename)
@@ -11,9 +11,12 @@ def read():
     return names
 
 
-champion = read()
-for i in champion:
-    print(i)
+
+
+
+
+
+
 
 
 
