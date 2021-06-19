@@ -42,7 +42,7 @@ class Champion:
         return champion.ability_power * (1 - (self.magic_armor / (100 + self.magic_armor)))
 
     def calculate_true_damage(self, champion):
-        print("CURRENT HP:", self.hp)
+        print("%s CURRENT HP:" % (self.name).upper() , self.hp)
         return champion.true_damage
 
     def calculate_hp_after_taken_damage(self, champion, is_physical_damage, is_magic_damage, is_true_damage):
@@ -51,11 +51,11 @@ class Champion:
         true_damage_taken = self.calculate_true_damage(champion) if is_true_damage else 0
         total_damage = physical_damage_taken + magic_damage_taken + true_damage_taken
         self.hp = self.hp - total_damage
-        print("CURRENT HP: ", self.hp)
+        print("%s AFTER CURRENT HP: " % (self.name).upper(), format(self.hp, '0.2f'))
 
     def use_q(self, opponent):
         if self.is_disabled:
-            print("IS DISABLED. CANNOT USE SKILL")
+            print("%s IS DISABLED. CANNOT USE SKILL" %self.name)
         else:
             self.button_q.activate(self, opponent)
 
@@ -70,7 +70,7 @@ class Champion:
 
     def recover(self, life_steal):
         self.hp = self.hp + life_steal
-        print("CURRENT HP AFTER RECOVER:", self.hp)
+        print("CURRENT HP AFTER RECOVER:", format(self.hp, '0.2f'))
 
     def set_disabled(self, is_disabled):
         print("IS DISABLED:", is_disabled)

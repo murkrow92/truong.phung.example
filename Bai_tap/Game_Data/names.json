@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Annie",
+    "filename": "annie.json"
+  },
+  {
+    "name": "Sylas",
+    "filename": "sylas.json"
+  },
+  {
+    "name" : "Ahri",
+    "filename" : "ahri.json"
+  }
+]
