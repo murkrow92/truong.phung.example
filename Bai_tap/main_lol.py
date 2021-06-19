@@ -23,5 +23,5 @@ from Bai_tap.create_champion import read_names
 # print("\n")
 # sylas.use_w(ahri)
 champions = read_names()
-
+print(champions)
 
