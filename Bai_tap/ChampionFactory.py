@@ -17,6 +17,6 @@ def create_all_champions():
         print("CHAMPION CONFIG:", champion_config)
         print("NAME:", champion_config['name'])
         new_champion = selector[champion_config['name']]() if champion_config['name'] in selector else Sylas()
-        new_champion.print_champion()
+        # new_champion.print_champion()
         champions.append(new_champion)
     return champions

@@ -1,12 +1,13 @@
 from Bai_tap.Utils.file_utils import read_champion_data
 
+
 class Champion:
     is_disabled = False
 
-    def __init__(self, name, button_q, button_w, button_e, button_r):
+    def __init__(self, name,items, button_q, button_w, button_e, button_r):
 
         champion_data = read_champion_data(name.lower())
-
+        self.items = items
         self.name = name
         self.hp = champion_data['hp']
         self.attack_damage = champion_data['attack_damage']
@@ -42,7 +43,7 @@ class Champion:
         return champion.ability_power * (1 - (self.magic_armor / (100 + self.magic_armor)))
 
     def calculate_true_damage(self, champion):
-        print("%s CURRENT HP:" % (self.name).upper() , self.hp)
+        print("%s CURRENT HP:" % (self.name).upper(), self.hp)
         return champion.true_damage
 
     def calculate_hp_after_taken_damage(self, champion, is_physical_damage, is_magic_damage, is_true_damage):
@@ -55,7 +56,7 @@ class Champion:
 
     def use_q(self, opponent):
         if self.is_disabled:
-            print("%s IS DISABLED. CANNOT USE SKILL" %self.name)
+            print("%s IS DISABLED. CANNOT USE SKILL" % self.name)
         else:
             self.button_q.activate(self, opponent)
 
@@ -68,6 +69,9 @@ class Champion:
     def use_r(self, opponent):
         self.button_r.activate(self, opponent)
 
+    def add_items(self):
+        self.items.add_item(self)
+
     def recover(self, life_steal):
         self.hp = self.hp + life_steal
         print("CURRENT HP AFTER RECOVER:", format(self.hp, '0.2f'))
@@ -75,4 +79,5 @@ class Champion:
     def set_disabled(self, is_disabled):
         print("IS DISABLED:", is_disabled)
         self.is_disabled = is_disabled
+
 
