@@ -1,7 +1,7 @@
-from Bai_tap.Items.Items import Items
+from Bai_tap.Items.Item import Item
 
 
-class Kiem_bf(Items):
+class Kiem_bf(Item):
     def __init__(self):
         super().__init__(name="KIEM BF")
 
