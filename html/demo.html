@@ -5,21 +5,23 @@
     <title>Trainery</title>
     <style>
     .main{
-    width:50%;
-    height:100vh;
-    float:left;
+    display:flex;
+    flex-direction:row;
+    }
+    .main1{
+    flex:50%;
+
     }
     .main2{
-    width:50%;
-    height:100vh;
-    background-color: #020218;
-    float:left;
+    background-color: #001529;
+    flex:50%;
     }
     .logo{
     width:128px;
     height:96px;
     margin:auto;
     margin-top:70px
+
     }
     #title{
     width:164px;
@@ -39,17 +41,42 @@
     .form{
     width:100%;
     height:230px;
-    text-align:center;
+   }
+    .input_container{
+    position:relative;
+    width:360px;
+    margin:auto;
+    margin-top:30px;
+    }
+    .input {
+    height:40px;
+    width:90%;
+    padding-left:30px;
+    border-radius:8px;
+    }
+
+    .input_img {
+    position:absolute;
+    bottom:17px;
+    left:10px;
+    width:14px;
+    height:14px;
+    }
+    .login{
+    background-color:#1890FF;
+    line-height:40px;
+    text-align: center;
+    font-size:16px;
     }
     </style>
 </head>
-<body>
-<div class="main">
+<body class="main">
+<div class="main1">
     <img src="../images/anh.png" alt="anh" style="width:100%; height:100%">
 </div>
 <div class="main2">
     <div class="logo">
-        <img src="../images/logo.png" alt="logo" style="width:100%; height:100%">
+        <img src="../images/logo.png" alt="logo">
     </div>
     <div id="title">
         <p>TRAINERY</p>
@@ -58,14 +85,27 @@
         <p>Đào tạo</p>
     </div>
     <div class="form ">
-        <input style="type:text; height:30px; width:368px; border-radius:8px;" placeholder="Số điện thoại"> <br>
-        <input style="type:text; height:30px; width:368px;margin-top:25px;border-radius:8px" placeholder="Mật khẩu "><br>
-        <form style="padding-top:20px">
-            <input type="checkbox">
+        <div class="input_container">
+            <input type="text" class="input" placeholder="Số điện thoại">
+            <img src="../images/telephone.png" width="14px" height="14px" class="input_img">
+        </div>
+        <div class="input_container">
+            <input type="text" class="input" placeholder="Mật khẩu">
+            <img src="../images/padlock.png" width="14px" height="14px" class="input_img">
+        </div>
+        <div class="input_container">
+            <input type="checkbox" >
             <label style="color:white"> Nhớ tài khoản </label>
-            <a style="padding-left:45px; color:#1890FF;
+            <a style="padding-left:20px; color:#1890FF;
             text-decoration:none" href=" " >Quên mật khẩu?Liên hệ Trainery.</a>
-        </form>
+        </div>
+        <div class="input_container">
+            <div class="login">
+                <a style="color:white;  text-decoration:none" href="">Đăng nhập</a>
+            </div>
+
+        </div>
+
     </div>
 
 </div>
