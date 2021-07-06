@@ -1,0 +1,112 @@
+body{
+        font-family:Helvetica, sans-serif;
+        font-weight: lighter;
+        }
+        .container{
+        display:flex;
+        background-color:FF3333;
+        margin:auto;
+        flex-direction:column;
+        justify-content: center;
+        width:360px;
+        }
+
+        header {
+        padding-top: 124px;
+        text-align: center;
+        background-image:url(../../images/Zeplin/bgPath.svg),url(../../images/Zeplin/icZeplin.svg) ;
+
+        background-repeat: no-repeat;
+        background-position:-200px 40px, 1000px 40px;
+        color:#554d56;
+        }
+
+        a{
+        text-decoration:none;
+        }
+        .login{
+        margin:auto;
+        line-height:40px;
+        width:100%;
+        background-color:white;
+        box-sizing: border-box;
+        text-align:center;
+        border-radius:2px;
+        border:1px solid #979197;
+        font-size:18px;
+
+        }
+        .login_text{
+        font-size:18px;
+        text-align:center;
+        color:#554d56;
+        }
+
+        .login_form{
+        margin:auto;
+        height:268px;
+        display:block;
+        }
+
+        .form_username{
+         width: 100%;
+        line-height:40px;
+        margin-top:20px;
+        border: none;
+        border-bottom: 2px solid #979197;
+        outline:none;
+        font-size:18px;
+
+       }
+
+        .form_password{
+        margin-top:35px;
+        width:360px;
+        height:40px;
+        border:none;
+        border-bottom:1px solid #979197;
+        outline:none;
+        font-size:18px;
+        }
+        .form_login{
+        margin:auto;
+        margin-top:35px;
+        width:100%;
+        line-height:48px;
+        background-color:#419BF9;
+        text-align:center;
+        border:none;
+        border-radius:2px;
+        color:white;
+        font-size:18px;
+        }
+        .footer{
+        margin:auto;
+        height:200px;
+        width:100%;
+        }
+
+        .login_sos{
+        color:#419BF9;
+        text-align:center;
+        font-size:14px;
+        margin:center;
+        }
+
+        .a_href{
+        padding-top:15px;
+        font-size:14px;
+        color:#979197;
+        }
+
+        .form_username:focus{
+        border:none;
+        border-bottom:2px solid #419BF9;
+        outline:none;
+        }
+
+        .form_password:focus{
+        border:none;
+        border-bottom:1px solid #419BF9;
+        outline:none;
+        }
